@@ -1,4 +1,4 @@
-package main.java.org.mbaum.common;
+package org.mbaum.common;
 
 import java.util.LinkedList;
 
