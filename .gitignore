@@ -15,6 +15,11 @@ hs_err_pid*
 /target
 /logs
 /.settings
+/.gradle
+/build
 
-# ignoring build artifacts
-dependency-reduced-pom.xml
+# ide specific files
+# eclipse
+.classpath
+.project
+

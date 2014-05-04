@@ -1,0 +1,12 @@
+apply plugin: 'java'
+apply plugin: "eclipse"
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile group: 'com.google.guava', name: 'guava', version: '17.0'
+    compile 'log4j:log4j:1.2.16'
+    compile 'org.apache.commons:commons-lang3:3.1'
+}
