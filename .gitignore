@@ -15,3 +15,6 @@ hs_err_pid*
 /target
 /logs
 /.settings
+
+# ignoring build artifacts
+dependency-reduced-pom.xml
