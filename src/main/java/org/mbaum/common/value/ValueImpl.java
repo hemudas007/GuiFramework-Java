@@ -4,34 +4,34 @@ import org.apache.commons.lang3.ObjectUtils;
 
 public class ValueImpl<T> implements Value<T>
 {
-	private T mValue;
-	
-	public ValueImpl( T value )
-	{
-		mValue = value;
-	}
+    private T mValue;
 
-	@Override
+    public ValueImpl( T value )
+    {
+        mValue = value;
+    }
+
+    @Override
     public T get()
     {
-	    return mValue;
+        return mValue;
     }
 
-	@Override
+    @Override
     public boolean set( T value )
     {
-		if ( ObjectUtils.equals( value, mValue ) )
-			return false;
-		
-		mValue = value;
-		return true;
+        if ( ObjectUtils.equals( value, mValue ) )
+            return false;
+
+        mValue = value;
+        return true;
     }
-	
-	@Override
-	public boolean isEmpty()
-	{
-	    return mValue == null;
-	}
+
+    @Override
+    public boolean isEmpty()
+    {
+        return mValue == null;
+    }
 
     @Override
     public String toString()

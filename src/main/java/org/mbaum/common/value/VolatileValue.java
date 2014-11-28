@@ -4,32 +4,32 @@ import org.apache.commons.lang3.ObjectUtils;
 
 public class VolatileValue<T> implements Value<T>
 {
-	private volatile T mValue;
-	
-	public VolatileValue( T value )
-	{
-		mValue = value;
-	}
+    private volatile T mValue;
 
-	@Override
+    public VolatileValue( T value )
+    {
+        mValue = value;
+    }
+
+    @Override
     public T get()
     {
-	    return mValue;
+        return mValue;
     }
 
-	@Override
+    @Override
     public boolean set( T value )
     {
-		if ( ObjectUtils.equals( value, mValue ) )
-			return false;
-		
-		mValue = value;
-		return true;
+        if ( ObjectUtils.equals( value, mValue ) )
+            return false;
+
+        mValue = value;
+        return true;
     }
-	
-	@Override
-	public boolean isEmpty()
-	{
-	    return mValue == null;
-	}
+
+    @Override
+    public boolean isEmpty()
+    {
+        return mValue == null;
+    }
 }
